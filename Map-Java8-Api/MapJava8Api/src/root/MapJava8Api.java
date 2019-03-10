@@ -26,8 +26,8 @@ public class MapJava8Api {
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		for(int i = 0; i < string.length(); i++ ) {
 			char charAt = string.charAt(i);
-			BiFunction<Integer, Integer, Integer> remappingFunction = (v,one) ->{
-				return v == null ? one : v+one;
+			BiFunction<Integer, Integer, Integer> remappingFunction = (v,increment) ->{
+				return v == null ? increment : v+increment;
 			};
 			int increment = 1;
 			map.merge(charAt, increment , remappingFunction);
