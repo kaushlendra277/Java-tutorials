@@ -12,11 +12,15 @@ public class NumberRecursion {
 		// NumberOperation.fibonacciSeries(0, 1);
 		
 		// fibonacci series in reverse
-		NumberOperation.fibonacciSeriesInReverse(0, 1);
-		System.out.println(1);
-		System.out.println(0);
+		//NumberOperation.fibonacciSeriesInReverse(0, 1);
+		//System.out.println(1);
+		//System.out.println(0);
 				
+		//sum of digits
+		//System.out.println(NumberOperation.sumOfDigits(412534));
 		
+		//power
+		System.out.println(NumberOperation.power(3,3));
 	}
 
 }
@@ -39,5 +43,23 @@ class NumberOperation{
 		if(sum > 20) return;
 		fibonacciSeriesInReverse(number2,sum);
 		System.out.println(sum);
+	}
+	
+	public static int sumOfDigits(int number) {
+		int sum = 0;
+		if(number/10 == 0) {
+			return number%10;
+		}
+		sum = number%10 + sumOfDigits(number/10);
+		return sum;
+	}
+	
+	public static int power(int base, int power) {
+		int product = 0;
+		if(power == 1) {
+			return base;
+		}
+		product = base * power(base, power-1);
+		return product;
 	}
 }

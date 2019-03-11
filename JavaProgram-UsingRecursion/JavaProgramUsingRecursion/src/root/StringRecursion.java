@@ -1,9 +1,11 @@
 package root;
 
+import java.util.List;
+
 public class StringRecursion {
 
 	public static void main(String[] args) {
-		System.out.println(StringOperation.reverse("hello"));
+		System.out.println(StringOperation.reverseString("hello ksc"));
 	}
 
 }
@@ -13,9 +15,23 @@ class StringOperation{
 	// bcd
 	// cd
 	// d
-	public static String reverse(String string) {
+	public static String reverseString(String string) {
 		if(string.isEmpty()) return "";
-		String str = reverse(string.substring(1)).concat(string.charAt(0)+"");
+		String str = reverseString(string.substring(1)).concat(string.charAt(0)+"");
 		return str;
-	} 
+	}
+	/*
+	public static void revereseOrder(String test) {
+		StringBuilder sb = new StringBuilder();
+		if(test.isEmpty()) {
+			return;
+		}
+		int index = test.indexOf(" ");
+		sb
+		.append(revereseOrder(test.substring(index, test.indexOf(" ", index +1))));
+		
+		
+	}
+	*/
+	
 }
