@@ -1,8 +1,13 @@
-# 1. to ignore the comple directory 
-/gitignore/.metadata
+# 1. to ignore the complete directory 
+/*/ignore-completely
 
 # 2. to ignore a soecific .txt file
 ignore-file1.txt
 
 # 3. wildcard used to ignore all .txt file
+# 3.1 wildcard used to ignore all .txt file from root directory
+/*.txt
+# 3.2 wildcard used to ignore all .txt file from 1st level subfolder of root directory
+/*/*.txt
+# 3.3 wildcard used to ignore all .txt file
 *.txt
