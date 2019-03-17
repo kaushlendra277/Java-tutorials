@@ -1,0 +1,8 @@
+# 1. to ignore the comple directory 
+/gitignore/.metadata
+
+# 2. to ignore a soecific .txt file
+ignore-file1.txt
+
+# 3. wildcard used to ignore all .txt file
+*.txt
