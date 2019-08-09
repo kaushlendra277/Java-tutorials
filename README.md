@@ -20,3 +20,23 @@ Comparator Interface powered by Java 8.
   
   5. Comparator<T>.thenComparing [From Java 8], this method returns Comparator<T>
   https://github.com/kishanjavatrainer/Java8ComparatorThenComparingMethodsDemo
+
+  6. Comparator<T>.naturalOrder [From Java 8], this method returns Comparator<T> 
+  Comparator<T>.reverseOrder [From Java 8], this method returns Comparator<T> 
+  https://github.com/kishanjavatrainer/NaturalOrderAndReverseOrderComparatorDemo
+  
+  7. Comparator<T>.nullsFirst [From Java 8], this method returns Comparator<T> 
+  Comparator<T>.nullsLast [From Java 8], this method returns Comparator<T> 
+  https://github.com/kishanjavatrainer/ComparatorSortingWithNullsDemo
+  
+  8. Comparator<T>.reversed [From Java 8], this method returns Comparator<T>
+  https://github.com/kishanjavatrainer/ComparatorReversalMethodDemo
+  
+  Conclusion example:
+    students
+      .sort(
+          Comparator
+          .comparing(Student::getId, Comparator.nullsLast(Comparator.naturalOrder()))
+          .reversed()
+          .thenComparing(Student :: getName, Comparator.naturalOrder())
+          );
